@@ -1,0 +1,33 @@
+﻿@using Core.DTOs;
+@model IEnumerable<MyServiceDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Hizmetlerimiz</h3>
+<table class="table table-bordered">
+    <tr>
+       
+        <th>Hizmet Adı</th>
+        <th>Açıklama</th>        
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+           
+            <td>@item.ServiceName</td>
+            <td>@item.Description</td>
+           
+            @*<td><a href="/Experience/DeleteExperience/@item.Id"  class="btn btn-danger">Delete</a></td>*@
+            <td><a asp-action="DeleteService" asp-controller="Services" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Silmek istiyor musun?')">Delete</a></td>
+            <td><a asp-action="UpdateService" asp-controller="Services" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+        </tr>
+    }
+</table>
+<a asp-controller="Services" asp-action="AddService"  class="btn btn-primary"> Yeni Hizmet Ekle</a>
+

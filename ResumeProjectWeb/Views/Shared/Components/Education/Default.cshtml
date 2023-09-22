@@ -1,0 +1,28 @@
+﻿@model List<Education>
+@{
+    Layout = null;
+}
+
+<div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="education wow fadeInRight" data-wow-delay="0.3s">
+        <ul class="timeline">
+            <li>
+                <i class="icon-graduation"></i>
+                <h2 class="timelin-title">Eğitim Bilgileri</h2>
+            </li>
+
+            @foreach (var item in Model)
+            {
+                <li>
+                    <div class="content-text">
+                        <h3 class="line-title">@item.SchoolName</h3>
+                        <span>@item.Date</span>
+                        <p class="line-text">@item.Description</p>
+                    </div>
+                </li>
+            }
+           
+           
+        </ul>
+    </div>
+</div>

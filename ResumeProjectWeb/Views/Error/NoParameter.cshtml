@@ -1,0 +1,14 @@
+﻿@model ErrrorViewModel
+@{
+    ViewData["Title"] = "NoParameter";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Parametre Hata Sayfası</h1>
+
+@foreach (var item in Model.Errors)
+{
+    <h2>@item</h2>
+}    
+
+

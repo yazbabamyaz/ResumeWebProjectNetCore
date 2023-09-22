@@ -1,0 +1,17 @@
+﻿@model ContactAddressDto
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Adres Güncelleme Sayfası</h1>
+
+<form class="form-group" method="post">
+    <input type="text" asp-for="Address" class="form-control" placeholder="Adres bilgisi giriniz..." />
+    <br />
+    <input type="text" asp-for="Email" class="form-control" placeholder="Email giriniz..." />
+
+    <textarea asp-for="Phone" class="form-control" placeholder="Telefon Numarası Giriniz..." rows="5"></textarea>
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

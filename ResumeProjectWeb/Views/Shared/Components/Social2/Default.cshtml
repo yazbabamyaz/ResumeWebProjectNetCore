@@ -1,0 +1,15 @@
+﻿@model List<Social>
+@{
+    Layout = null;
+}
+
+<ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+
+    @foreach (var item in Model)
+    {
+         <li>
+        <a class="facebook" href="@item.Link"><i class="@item.Icon"></i></a>
+        </li> 
+    }
+     
+</ul>

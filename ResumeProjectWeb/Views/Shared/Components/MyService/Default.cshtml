@@ -1,0 +1,33 @@
+﻿@using Core.Entities
+@model List<MyService>
+@{
+    Layout = null;
+}
+
+<section id="services" class="services section-padding">
+    <h2 class="section-title wow flipInX" data-wow-delay="0.4s">İlgi Alanlarım</h2>
+    <div class="container">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-3 col-xs-12">
+                    <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <i class="icon-grid"></i>
+                        </div>
+                        <div class="services-content">
+                            <h3><a href="#">@item.ServiceName</a></h3>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+               
+            }
+            <!-- Services item -->
+              
+          
+        </div>
+        
+    </div>
+</section>

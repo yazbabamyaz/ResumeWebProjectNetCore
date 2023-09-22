@@ -1,0 +1,41 @@
+﻿
+@model List<About>
+@{
+    Layout = null;
+}
+
+<section id="about" class="section-padding">
+    <div class="container">
+
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+                        <img class="img-fluid" src="/meet-me-opl/assets/img/about/ornek2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+                        <h3>@item.Slogan</h3>
+                        <p>@item.Description</p>
+                        <div class="about-profile">
+                            <ul class="admin-profile">
+                                <li><span class="pro-title"> Name </span> <span class="pro-detail">@item.Name</span></li>
+                                <li><span class="pro-title"> Age </span> <span class="pro-detail">25 Years</span></li>
+                                <li><span class="pro-title"> Experience </span> <span class="pro-detail">4 Years</span></li>
+                                <li><span class="pro-title"> Country </span> <span class="pro-detail">@item.Address</span></li>
+                                
+                                <li><span class="pro-title"> e-mail </span> <span class="pro-detail">@item.Mail</span></li>
+                                <li><span class="pro-title"> Phone </span> <span class="pro-detail">@item.PhoneNumber</span></li>
+                                
+                            </ul>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        }
+       
+    </div>
+</section>

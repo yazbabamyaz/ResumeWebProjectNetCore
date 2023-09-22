@@ -1,0 +1,21 @@
+﻿@model EducationDto
+@{
+    ViewData["Title"] = "UpdateEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Eğitim Güncelleme Sayfası</h1>
+
+<form class="form-group" method="post">
+    <input type="text" asp-for="SchoolName" class="form-control" placeholder="Okul ismi giriniz..." />
+    @*html kullanımı da şu şekilde:
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})*@
+    <br />
+    <input type="text" asp-for="Date" class="form-control" placeholder="Tarih Aralığı giriniz..." />
+
+    <textarea asp-for="Description" class="form-control" placeholder="Eğitim Açıklama Giriniz..." rows="5"></textarea>
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

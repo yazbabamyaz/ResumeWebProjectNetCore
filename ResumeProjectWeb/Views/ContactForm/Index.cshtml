@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ContactFormDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Mesaj Tablosu</h1>
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>Ad-Soyad</th>
+        <th>E-Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Tarih</th>
+        <th>Sil</th>        
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.FullName</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+            <td>@item.Date</td>
+
+            @*<td><a href="/Experience/DeleteExperience/@item.Id"  class="btn btn-danger">Delete</a></td>*@
+            <td><a asp-action="DeleteMessage" asp-controller="ContactForm" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Silme işlemi onaylansın mı?')">Sil</a></td>
+            
+        </tr>
+    }
+</table>
+
+

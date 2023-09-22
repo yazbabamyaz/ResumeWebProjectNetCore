@@ -1,0 +1,17 @@
+﻿@using Core.DTOs;
+@model MyServiceDto
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Hizmet Ekleme Sayfası</h1>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form class="form-group" method="post">
+    <input type="text" asp-for="ServiceName" class="form-control" placeholder="Başlık yazınız..." /> <span asp-validation-for="ServiceName" class="text-danger"></span>
+    <br />    
+    <textarea asp-for="Description" class="form-control" placeholder="Açıklama Giriniz..." rows="5"></textarea><span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>
+

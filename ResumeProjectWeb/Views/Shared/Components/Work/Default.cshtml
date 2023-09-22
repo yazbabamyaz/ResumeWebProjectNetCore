@@ -1,0 +1,42 @@
+﻿@model List<Work>
+@{
+    Layout = null;
+}
+
+<section id="portfolios" class="section-padding">
+    <!-- Container Starts -->
+    <div class="container">
+        <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Projelerimiz</h2>
+        <div class="row">
+           
+
+            <!-- Portfolio Recent Projects -->
+            <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
+                        <div class="portfolio-item">
+                            <div class="shot-item">
+                                <img src="~/Admin/images/work/@item.Image" alt="" />
+                                <div class="overlay">
+                                    <div class="icons">
+                                        <a class="lightbox preview" href="~/Admin/images/work/@item.Image">
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                        <a class="link" href="@item.Link">
+                                            <i class="icon-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+               
+               
+            </div>
+        </div>
+    </div>
+    <!-- Container Ends -->
+</section>

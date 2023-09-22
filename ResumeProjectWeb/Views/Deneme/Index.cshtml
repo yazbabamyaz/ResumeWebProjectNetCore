@@ -1,0 +1,44 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Core.Entities.ContactForm>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+<div class="container" style="margin-top:20px;">
+    <h3>product</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>isim</th>
+            <th>Email</th>
+            <th>Konu</th>
+            <th>Mesaj</th>
+            <th>Tarih</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Subject</td>
+                <td>@item.Message</td>
+                <td>@item.Date</td>
+            </tr>
+        }
+
+
+
+    </table>
+  @* <div class="pagedList">
+        @Html.PagedListPager(Model, sayfa => Url.Action("Index", new { sayfa }), PagedListRenderOptions.PageNumbersOnly)
+</div>*@
+
+
+    <br />
+   
+
+</div>

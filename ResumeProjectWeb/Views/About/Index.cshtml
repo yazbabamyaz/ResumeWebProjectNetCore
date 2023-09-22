@@ -1,0 +1,36 @@
+﻿@using Core.DTOs;
+@model AboutDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hakkımda Sayfası</h1>
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <input type="text" asp-for="SurName" class="form-control" />
+    <br />
+    <input type="text" asp-for="Address" class="form-control" />
+    <br />
+    <input type="text" asp-for="PhoneNumber" class="form-control" />
+    <br />
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />   
+    <input type="text" asp-for="Slogan" class="form-control" />
+    <br />    
+    <input type="text" asp-for="Profession" class="form-control" />
+    <br />
+   @* <input type="text" asp-for="Image" class="form-control" />*@
+    <input type="file" class="form-control-file" name="file" />
+    <br />
+    <textarea class="form-control" asp-for="Description" rows="4"></textarea>
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
+
+

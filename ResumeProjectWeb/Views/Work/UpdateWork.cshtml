@@ -1,0 +1,45 @@
+﻿@model WorkDto
+@{
+    ViewData["Title"] = "UpdateWork";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Proje Güncelleme Sayfası</h1>
+
+<form class="form-group" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+    <input type="file" name="file"  class="form-control-file" />
+    <br />
+    <input type="text" asp-for="Link" class="form-control" />
+    <br />
+    <input type="text" asp-for="ProjectName" class="form-control" />
+    <br />
+
+
+    <span class="form-check-label"> Proje Durumu: </span>
+    
+        <input class="form-check-input" type="radio" value="True" asp-for="ProjectStatus"  checked />
+    <span class="form-check-label"> Bitti &nbsp;&nbsp;&nbsp; </span>
+   
+    
+        <input class="form-check-input" type="radio" value="False" asp-for="ProjectStatus" />
+        <span class="form-check-label"> Devam Ediyor </span>
+    
+        <br /><br />
+        <span class="form-check-label"> Proje Ödülü: </span>
+
+        <input class="form-check-input" type="radio" value="True" asp-for="ProjectAward"  checked />
+    <span class="form-check-label"> Evet &nbsp;&nbsp;&nbsp; </span>
+
+
+        <input class="form-check-input" type="radio" value="False" asp-for="ProjectAward" />
+        <span class="form-check-label"> Hayır </span>
+
+
+
+    @*<input type="text" asp-for="ProjectStatus" class="form-control" />
+    <br />*@
+  
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

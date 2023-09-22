@@ -1,0 +1,22 @@
+﻿@using Core.DTOs;
+@model MyServiceDto
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Service Güncelleme Sayfası</h1>
+
+<form class="form-group" method="post">
+    <input type="text" asp-for="ServiceName" class="form-control" placeholder="Hizmet ismi giriniz..." />
+    @*html kullanımı da şu şekilde:
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x=>x.Title,new {@class="form-control"})*@
+    <br />
+   
+   
+    <textarea asp-for="Description" class="form-control" placeholder="Hizmet Açıklama Giriniz..." rows="5"></textarea>
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

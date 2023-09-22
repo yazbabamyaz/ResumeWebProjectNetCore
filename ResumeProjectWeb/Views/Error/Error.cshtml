@@ -1,0 +1,20 @@
+﻿@model ProblemDetails
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@*<div class="alert alert-danger">
+    
+        <p>@ViewBag.ErrorMessage</p>
+    <p>@ViewBag.ErrorCode</p>
+    
+
+</div>*@
+<div class="alert alert-danger">
+
+    <p>Status Code:@Model.Status</p>
+    <p>Hata Başlığı:@Model.Title</p>
+    <p>Hata Mesajı:@Model.Detail</p>
+
+
+</div>

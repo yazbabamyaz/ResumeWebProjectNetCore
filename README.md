@@ -5,13 +5,12 @@ Kullandığım Mimari-yöntem-kütüphane ve yaklaşımlar:
 2. AutoMapper ile Entity classlarımızın dönüşümü yapılmıştır.
 3. Validasyon işlemleri FluentValidation kütüphanesi kullanıldı.5. AutoFac ile  kullanıldı.
 4. ViewComponent kullanıldı.
-5. Microsoft Sql Server Database kullanıldı.
-6. N-Tier Architecture kullanıldı.
-7. UI Katmanında veriler Api den consume edildi.
-8. SignalR ile uygulamamıza bol bol REAL-TİME fonksiyonellik kazandırdık.   
+5. Service register işlemleri için AutoFac kullanıldı.
+6. Microsoft Sql Server Database kullanıldı.
+7. N-Tier Architecture kullanıldı.
+8. Extension Method , Action Filter ve Custom Exception kullanıldı.
+9. Repository ve Unit of Work Design Pattern kullanıldı.
 ---
-Yapılacaklar: Program.cs içindeki servis kayıtlarının AutoFac ile gerçekleştirilmesi. 
-
 <img src="https://github.com/yazbabamyaz/ResumeWebProjectNetCore/blob/master/ResumeProjectWeb/wwwroot/Readme_image/1.png">
 <img src="https://github.com/yazbabamyaz/ResumeWebProjectNetCore/blob/master/ResumeProjectWeb/wwwroot/Readme_image/2.png">
 <img src="https://github.com/yazbabamyaz/ResumeWebProjectNetCore/blob/master/ResumeProjectWeb/wwwroot/Readme_image/3.png">
